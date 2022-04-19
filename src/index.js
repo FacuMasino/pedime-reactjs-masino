@@ -9,7 +9,7 @@ import App from './App';
 
 /**
   * Referenciar los paquetes de FA para que
-  * esten disponible siempre en el componente 
+  * esten disponibles siempre en el componente 
   */
 library.add(fab, faShoppingBasket)
 

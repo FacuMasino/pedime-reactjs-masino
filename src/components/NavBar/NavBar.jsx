@@ -9,14 +9,14 @@ function NavBar() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div className="navbar-nav m-auto">
+					<div className="navbar-nav">
 						<a className="nav-link active" aria-current="page" href="/">Inicio</a>
 						<a className="nav-link" href="/">Burguers</a>
 						<a className="nav-link" href="/">Pizzas</a>
 						<a className="nav-link" href="/">Picadas</a>
 					</div>
 				</div>
-				<CartWidget className="d-inline-flex pb-md-0 pb-2 px-3">0</CartWidget>
+				<CartWidget className="d-inline-flex pe-lg-0 pb-lg-0 pb-1 pe-1">0</CartWidget>
 			</div>	
 		</nav>
 	);

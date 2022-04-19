@@ -3,11 +3,12 @@
 
 .cartwidget {
 	color: white;
-	@media (max-width: map-get($grid-breakpoints, sm)) {
+	@media (max-width: map-get($grid-breakpoints, lg)) {
 		position: fixed;
 		bottom: 0;
 		right: 0;
 		color: black;
+		margin-right: 0.75rem;
 	}
 	.badge {
 		font-size: 0.7em;
