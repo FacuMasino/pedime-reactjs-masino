@@ -1,0 +1,15 @@
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+
+.cartwidget {
+	color: white;
+	@media (max-width: map-get($grid-breakpoints, sm)) {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		color: black;
+	}
+	.badge {
+		font-size: 0.7em;
+	}
+}

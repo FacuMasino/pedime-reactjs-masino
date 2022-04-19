@@ -1,4 +1,4 @@
-import React from 'react';
+import CartWidget from '../CartWidget';
 
 function NavBar() {
 	return (
@@ -9,14 +9,15 @@ function NavBar() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div className="navbar-nav ms-auto">
+					<div className="navbar-nav m-auto">
 						<a className="nav-link active" aria-current="page" href="/">Inicio</a>
 						<a className="nav-link" href="/">Burguers</a>
 						<a className="nav-link" href="/">Pizzas</a>
 						<a className="nav-link" href="/">Picadas</a>
 					</div>
 				</div>
-			</div>
+				<CartWidget className="d-inline-flex pb-md-0 pb-2 px-3">0</CartWidget>
+			</div>	
 		</nav>
 	);
 }
