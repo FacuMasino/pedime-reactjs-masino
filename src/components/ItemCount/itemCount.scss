@@ -1,0 +1,44 @@
+.itemcount {
+	$bg-primary: rgb(224, 224, 215);
+	display: inline-flex;
+	align-items: center;
+	align-content: center;
+	//border: 1px solid #000;
+	border-radius: 0.25rem;
+	background-color: $bg-primary;
+
+	&-control {
+		border: 0;
+		line-height: 2;
+		background-color: $bg-primary;
+
+		&.minus {
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
+
+		&.plus {
+			border-radius: 0.25rem 0.25rem 0.25rem 0;
+		}
+	}
+
+	input.itemcount-control {
+		width: 3rem;
+		text-align: center;
+
+		&:focus-visible {
+			outline: 0;
+		}
+
+		// Firefox
+		&[type=number] {
+			-moz-appearance: textfield;
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+	}
+}

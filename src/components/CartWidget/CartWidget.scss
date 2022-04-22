@@ -7,10 +7,12 @@
 		position: fixed;
 		bottom: 0;
 		right: 0;
-		color: black;
+		color: #000;
 		margin-right: 0.75rem;
 	}
 	.badge {
 		font-size: 0.7em;
+		color: #000;
+		border: 1px solid #000;
 	}
 }

@@ -2,9 +2,9 @@ import CartWidget from '../CartWidget';
 
 function NavBar() {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container-fluid">
-				<a className="navbar-brand" href="/">PediMe</a>
+		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div className="container">
+				<a className="navbar-brand fw-bold" href="/">Pedi<span className="text-secondary">Me</span></a>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
