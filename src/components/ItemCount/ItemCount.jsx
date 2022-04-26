@@ -10,10 +10,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
 	const updateDisabledButtons = () => {
 		setCanIncrement(prodQty < stock);
-		setCanDecrement(prodQty >= 1);
-		setCanAdd(prodQty >= 1 && prodQty <= stock);
+		setCanDecrement(prodQty >= initial);
+		setCanAdd(prodQty >= initial && prodQty <= stock);
 	};
 
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(updateDisabledButtons, [prodQty, stock]);
 
 	return (
