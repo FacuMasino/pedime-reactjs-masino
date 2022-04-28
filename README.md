@@ -3,6 +3,11 @@
 ### Delivery de comida rápida
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+#### Desafío Clase 5 - Catálogo con MAPS y Promises
+*Consigna:*
+- Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. 
+- Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red
+
 #### Desafío Clase 4 - Contador con botón
 *Consigna:*
 - Crea un componente ItemCount.js, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems.
