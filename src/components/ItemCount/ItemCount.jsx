@@ -13,12 +13,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 		setCanDecrement(prodQty >= initial);
 		setCanAdd(prodQty >= initial && prodQty <= stock);
 	};
-
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(updateDisabledButtons, [prodQty, stock]);
 
 	return (
-		<div className="d-inline-flex flex-column p-2">
+		<div className="d-inline-flex align-items-center">
 			<div className="itemcount">
 				<button
 					type="button"

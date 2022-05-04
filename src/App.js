@@ -1,16 +1,22 @@
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import {ToastContainer} from 'react-toastify';
+import Header from './components/Header';
+/* import ItemListContainer from './components/ItemListContainer'; */
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Footer from './components/Footer';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar/>
-      <ItemListContainer greeting="Menú de productos"></ItemListContainer>
-      <ToastContainer />
-    </div>
-  );
+	return (
+		<div className="App">
+			<NavBar />
+			<Header />
+			{/* <ItemListContainer greeting="Menú de productos"></ItemListContainer> */}
+			<ItemDetailContainer />
+			<ToastContainer />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;

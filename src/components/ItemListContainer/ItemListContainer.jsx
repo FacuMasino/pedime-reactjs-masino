@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
-import ItemCount from '../ItemCount';
+/* import { toast } from 'react-toastify'; */
 import ItemList from '../ItemList';
 import ItemsSkeleton from '../ItemsSkeleton';
 import getProducts from '../../services/getProducts';

@@ -2,8 +2,19 @@
 ## PediMe App
 ### Delivery de comida rápida
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
-
-#### Desafío Clase 5 - Catálogo con MAPS y Promises
+#### Desafío Clase 6 - Detalle de Producto
+*Consigna:*
+- Crea tu componente ItemDetailContainer, con la misma premisa que ItemListContainer.
+- Al iniciar utilizando un efecto de montaje, debe llamar a un async mock, utilizando lo visto en la clase anterior con Promise, que en 2 segundos le devuelva un 1 ítem, y lo guarde en un estado propio.
+- crea tu componente ItemDetail.js.
+- ItemDetail.js, que debe mostrar la vista de detalle de un ítem incluyendo su descripción, una foto y el precio.
+  
+##### Cambios aplicados:
+- Se crearon los componentes ItemDetailContainer.jsx e ItemDetail.jsx
+- Se agregaron 2 componentes extras, ItemDetailCarousel e ItemDetailSkeleton. El primero es para mostrar distintas imágenes del producto en caso de haberlas, y el segundo para mostrar un componente de "cargando.." mientras se resuelve la promesa.
+- Se agregó un banner en el header de la página
+- Se agregó un Footer en la página para mostrar información de contacto, horarios y redes sociales
+#### Desafío Clase 5 - Catálogo con Map y Promises
 *Consigna:*
 - Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. 
 - Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red

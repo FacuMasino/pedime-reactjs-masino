@@ -1,0 +1,25 @@
+.btn-carousel {
+	width: 100%;
+	aspect-ratio: 1/1;
+	border: 2px solid var(--bs-light);
+	margin-top: 1rem;
+	&-selected {
+		border: 2px solid var(--bs-primary);
+	}
+}
+.item-image {
+	transition: transform 0.3s ease-in-out;
+	height: auto;
+	max-height: 300px;
+	max-width: 100%;
+	object-fit: contain;
+	&:hover {
+		transform: scale(1.04);
+	}
+	&-mini {
+		height: 100%;
+		width: 100%;
+		margin: auto;
+		object-fit: contain;
+	}
+}

@@ -1,0 +1,31 @@
+.vh-50 {
+	height: 50vh;
+}
+.banner {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url('../../assets/img/header_burger.jpg') rgba(0, 0, 0, 0.1);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: bottom;
+		filter: brightness(65%);
+	}
+	&-title, &-brand {
+		position: relative;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+	}
+	&-brand {
+		display: inline;
+		padding: 0 0.3rem 0 0.3rem;
+		background: var(--bs-primary);
+	}	
+}
+
