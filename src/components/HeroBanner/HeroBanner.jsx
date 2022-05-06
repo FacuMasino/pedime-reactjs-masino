@@ -1,6 +1,6 @@
-import './Header.scss';
+import './HeroBanner.scss';
 
-const Header = () => {
+const HeroBanner = () => {
 	return (
 		<div className="container-fluid vh-50 banner">
 			<div className="container h-100">
@@ -19,4 +19,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default HeroBanner;

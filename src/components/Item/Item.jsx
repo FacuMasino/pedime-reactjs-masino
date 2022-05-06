@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import './Item.scss';
 
 const Item = ({ item }) => {
 	return (
 		<div className="col">
 			<div className="card h-100">
-				<img src={item.imageUrl} className="card-img-top" alt={item.title} />
+				<img src={item.images[0]} className="card-img-top" alt={item.title} />
 				<div className="card-body">
 					<h5 className="card-title h4 text-uppercase">{item.title}</h5>
 					<p className="card-text">{item.description}</p>
@@ -14,7 +15,9 @@ const Item = ({ item }) => {
 					</div>
 				</div>
 				<div className="card-body text-center">
-					<button className="btn btn-primary">Ver detalle</button>
+					<Link className="btn btn-primary" to={`/Item/${item.id}`}>
+						Ver detalle
+					</Link>
 				</div>
 			</div>
 		</div>

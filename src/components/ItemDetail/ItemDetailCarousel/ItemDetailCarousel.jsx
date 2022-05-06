@@ -22,7 +22,7 @@ const ItemDetailCarousel = ({ images }) => {
 					})}
 				</div>
 			</div>
-			<div className="col-md-10 col-12 p-2">
+			<div className="col-md-10 col-12 p-2 overflow-hidden">
 				<img
 					className="item-image img-fluid mx-auto d-block"
 					src={images[selectedIndex]}

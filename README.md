@@ -2,6 +2,30 @@
 ## PediMe App
 ### Delivery de comida rápida
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
+
+#### Primer entrega del proyecto final
+*Consigna:*
+- Configurar en App.js el routing usando BrowserRouter con react-router-dom.
+- Rutas a configurar:
+  - '/' navega a <ItemListContainer />
+  - 'category/:categoryId' <ItemListContainer />
+  - 'item/:itemId' <ItemDetailContainer />
+- Links a configurar:
+  - Click en brand navega a '/'
+  - Click en un Item.js navega a '/item/:itemId'
+  - Click en categorya lleva a 'category/:categoryId'
+
+##### Cambios aplicados:
+- Se re-ordenaron las carpetas de los componentes para mayor legibilidad y se agregó la carpeta 'pages' para separar las páginas principales de los componentes.
+- Se agregaron en getProducts.js 2 funciones, getProductById(id) para obtener 1 producto y getProductsByCategory(category) para filtrar por categoria, así se consigue limpiar el código dentro de la lógica useEffect de cada página y hacer más sencillo el código.
+- Se agregaron nuevos productos necesarios para cumplir con el desafío y contar con distintas categorías.
+- Mejoras generales en el CSS
+- Se agregó una función sencilla onAddFn() dentro de ItemDetail.jsx que muestra un mensaje emergente con la librería react-toastify para simular que se agregó el producto al carrito.
+
+*GIF de demostración:*
+
+![GIF de demostración](https://lh6.googleusercontent.com/RMC3rnCZ9Xn8Bmc40qfbffFF1NwBqFMT6ne-0aMDXxujYuIqbeV-XryV8rKb-0yoq0Ib6zfW_f7NiTGkayh9=w1274-h436)
+
 #### Desafío Clase 6 - Detalle de Producto
 *Consigna:*
 - Crea tu componente ItemDetailContainer, con la misma premisa que ItemListContainer.

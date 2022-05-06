@@ -1,9 +1,14 @@
 import ItemCount from '../ItemCount';
-import ItemDetailCarousel from '../ItemDetailCarousel';
-
+import ItemDetailCarousel from './ItemDetailCarousel/ItemDetailCarousel';
+import { toast } from 'react-toastify';
 import './ItemDetail.scss';
 
 const ItemDetail = ({ item }) => {
+	// Mostrar un mensaje de prueba al agregar producto
+	const onAddFn = (n) =>
+		toast.success(`${n} producto${n > 1 ? 's' : ''} agregado${n > 1 ? 's' : ''}`, {
+			autoClose: 2000,
+		});
 	return (
 		<div className="container-xxl container-fluid">
 			<div className="row">
@@ -19,7 +24,11 @@ const ItemDetail = ({ item }) => {
 						<p className="my-0">
 							<span className="item-stock">Disponibles:</span> {item.stock}
 						</p>
-						<ItemCount initial={1} stock={item.stock}></ItemCount>
+						<ItemCount
+							initial={1}
+							stock={item.stock}
+							onAdd={(prodQty) => onAddFn(prodQty)}
+						></ItemCount>
 					</div>
 					<p className="m-0">
 						Categoría: <span className="text-muted">{item.category}</span>

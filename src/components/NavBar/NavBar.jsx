@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import './NavBar.scss';
 
@@ -5,9 +6,9 @@ function NavBar() {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
 			<div className="container">
-				<a className="navbar-brand fw-bold" href="/">
+				<Link className="navbar-brand fw-bold" to="/">
 					Pedi<span className="text-secondary">Me</span>
-				</a>
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -24,15 +25,15 @@ function NavBar() {
 						<a className="nav-link active" aria-current="page" href="/">
 							Inicio
 						</a>
-						<a className="nav-link" href="/">
-							Burguers
-						</a>
-						<a className="nav-link" href="/">
+						<Link className="nav-link" to="/category/burgers">
+							Burgers
+						</Link>
+						<Link className="nav-link" to="/category/pizzas">
 							Pizzas
-						</a>
-						<a className="nav-link" href="/">
+						</Link>
+						<Link className="nav-link" to="/category/picadas">
 							Picadas
-						</a>
+						</Link>
 					</div>
 				</div>
 				<CartWidget className="d-inline-flex pe-lg-0 pb-lg-0 pb-1 pe-1">0</CartWidget>

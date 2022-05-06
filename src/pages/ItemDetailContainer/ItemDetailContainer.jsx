@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
-import getProducts from '../../services/getProducts';
-import ItemDetail from '../ItemDetail';
-import ItemDetailSkeleton from '../ItemDetailSkeleton';
+import { useParams } from 'react-router-dom';
+import { getProductById } from '../../services/getProducts';
+import ItemDetail from '../../components/ItemDetail';
+import ItemDetailSkeleton from '../../components/ItemDetailSkeleton';
 
 const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({});
+	const { itemId } = useParams();
 
 	useEffect(() => {
-		getProducts().then((products) => setProduct(products[0]));
-	}, []);
+		getProductById(itemId).then((product) => {
+			setProduct(product);
+		});
+	}, [itemId]);
 
 	return (
 		<div className="container-fluid p-0 bg-white">

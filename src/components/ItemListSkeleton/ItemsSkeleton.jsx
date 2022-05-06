@@ -1,5 +1,5 @@
-const ItemsSkeleton = ({ itemsQty, isLoading }) => {
-	return isLoading ? Array.from(Array(itemsQty), (e, index) => <ItemSkeleton key={index} />) : null;
+const ItemsSkeleton = ({ itemsQty }) => {
+	return Array.from(Array(itemsQty), (e, index) => <ItemSkeleton key={index} />);
 };
 
 const ItemSkeleton = () => (
