@@ -1,15 +1,28 @@
 # <img src="https://raw.githubusercontent.com/FacuMasino/FacuMasino/main/assets/react-js.png" width="32"/> Proyecto final - Curso React JS
-## PediMe App
-### Delivery de comida rápida
+## PediMe App :motor_scooter:	
+### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
+
+#### Desafío Clase 8: Sincronizar Counter:
+*Consigna:*
+Importa el ItemCount.js del desafío Nº 4 en el counter ItemDetail.js, y configura el evento de compra, siguiendo los detalles de manual.
+:arrow_right: Cuando ItemCount emita un nuevo evento onAdd almacenarás ese valor en un estado interno del ItemDetail para hacer desaparecer el ItemCount
+:arrow_right: El botón de terminar mi compra debe poder navegar a un componente vacío por el momento en la ruta ‘/cart’.
+
+##### Cambios aplicados:
+:white_check_mark: La constante que contenía el array workDays fue movida a una carpeta "helpers" para separarlo del componente HeroBanner, ahora es accesible desde cualquier otro componente
+:white_check_mark: Se comprimió la imagen de HeroBanner y se generaron distintas imagenes según el tamaño del dispositivo, de esta forma se optimiza la velocidad de carga de la página en general. SASS se encarga de generar una media querie para cada una en el archivo HeroBanner.scss
+:white_check_mark: Se agregó la función onAddHandler en ItemDetail que guarda en un estado la cantidad de productos que el usuario eligió.
+:white_check_mark: Se agregó una condición dentro de ItemDetail para mostrar el botón de finalizar compra si es que el estado addedQty es mayor a 0. 
+:white_check_mark: Se reemplazó <Link\> en el NavBar por <NavLink\> que es el componente adecuado ya que agrega por defecto la clase "active" cuándo el link correspondiente se encuentra activo.
 
 #### Primer entrega del proyecto final
 *Consigna:*
 - Configurar en App.js el routing usando BrowserRouter con react-router-dom.
 - Rutas a configurar:
-  - '/' navega a <ItemListContainer />
-  - 'category/:categoryId' <ItemListContainer />
-  - 'item/:itemId' <ItemDetailContainer />
+  - '/' navega a <ItemListContainer\/>
+  - 'category/:categoryId' <ItemListContainer\/>
+  - 'item/:itemId' <ItemDetailContainer\/>
 - Links a configurar:
   - Click en brand navega a '/'
   - Click en un Item.js navega a '/item/:itemId'

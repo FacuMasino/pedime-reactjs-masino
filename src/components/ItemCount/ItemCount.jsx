@@ -41,7 +41,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 					<FontAwesomeIcon icon="fas fa-plus" />
 				</button>
 			</div>
-			<div className="itemcount-add mx-2 my-2">
+			<div className="mx-2 my-2">
 				<button disabled={!canAdd} className="btn btn-primary" onClick={() => onAdd(prodQty)}>
 					Agregar
 				</button>

@@ -1,14 +1,23 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount';
 import ItemDetailCarousel from './ItemDetailCarousel/ItemDetailCarousel';
 import { toast } from 'react-toastify';
 import './ItemDetail.scss';
 
 const ItemDetail = ({ item }) => {
-	// Mostrar un mensaje de prueba al agregar producto
-	const onAddFn = (n) =>
-		toast.success(`${n} producto${n > 1 ? 's' : ''} agregado${n > 1 ? 's' : ''}`, {
-			autoClose: 2000,
-		});
+	const [addedQty, setAddedQty] = useState(0);
+
+	const onAddHandler = (prodQty) => {
+		setAddedQty(prodQty);
+		toast.success(
+			`${prodQty} producto${prodQty > 1 ? 's' : ''} agregado${prodQty > 1 ? 's' : ''}`,
+			{
+				autoClose: 2000,
+			}
+		);
+	};
+
 	return (
 		<div className="container-xxl container-fluid">
 			<div className="row">
@@ -24,11 +33,22 @@ const ItemDetail = ({ item }) => {
 						<p className="my-0">
 							<span className="item-stock">Disponibles:</span> {item.stock}
 						</p>
-						<ItemCount
-							initial={1}
-							stock={item.stock}
-							onAdd={(prodQty) => onAddFn(prodQty)}
-						></ItemCount>
+						{addedQty > 0 ? (
+							<>
+								<p className="m-0">
+									<span className="item-stock">Cantidad seleccionada:</span> {addedQty}
+								</p>
+								<Link className="btn btn-primary my-2" to="/cart">
+									Finalizar compra
+								</Link>
+							</>
+						) : (
+							<ItemCount
+								initial={1}
+								stock={item.stock}
+								onAdd={(prodQty) => onAddHandler(prodQty)}
+							></ItemCount>
+						)}
 					</div>
 					<p className="m-0">
 						Categoría: <span className="text-muted">{item.category}</span>

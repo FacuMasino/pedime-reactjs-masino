@@ -1,3 +1,9 @@
+$breakpoints:(
+	small: '576px',
+	medium: '768px',
+	large: '992px',
+	xlarge: '1200px'
+);
 .vh-50 {
 	height: 50vh;
 }
@@ -10,12 +16,17 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url('../../assets/img/header_burger.jpg') rgba(0, 0, 0, 0.1);
+		background-image: url('../../assets/img/header_burger_w_xsmall.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: bottom;
 		filter: brightness(65%);
+		@each $key, $val in $breakpoints {
+			@media (min-width: #{$val}) {
+				background-image: url('../../assets/img/header_burger_'+#{$val}+'.jpg')
+			}
+		}
 	}
 	&-title, &-brand {
 		position: relative;

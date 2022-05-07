@@ -1,44 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { workDays } from '../../helpers';
 import './Footer.scss';
 
 const Footer = () => {
-	const workDays = [
-		{
-			dayName: 'Lunes',
-			openHour: '11:00',
-			closeHour: '00:00',
-		},
-		{
-			dayName: 'Martes',
-			openHour: '11:00',
-			closeHour: '00:00',
-		},
-		{
-			dayName: 'Miércoles',
-			openHour: '11:00',
-			closeHour: '00:00',
-		},
-		{
-			dayName: 'Jueves',
-			openHour: '11:00',
-			closeHour: '02:00',
-		},
-		{
-			dayName: 'Viernes',
-			openHour: '11:00',
-			closeHour: '02:00',
-		},
-		{
-			dayName: 'Sábado',
-			openHour: '11:00',
-			closeHour: '02:00',
-		},
-		{
-			dayName: 'Domingo',
-			openHour: '11:00',
-			closeHour: '23:00',
-		},
-	];
 	return (
 		<footer className="container-fluid bg-light p-2">
 			<div className="container my-3">
@@ -46,7 +10,7 @@ const Footer = () => {
 					<div className="col-md-3 col-12">
 						<p className="footer-title mb-1">Contacto</p>
 						<p>Puedes contactarnos a través de nuestras redes sociales o vía email</p>
-						<p>contact@pedimeapp.com</p>
+						<p>contacto@pedimeapp.com</p>
 					</div>
 					<div className="col-md-3 col-12">
 						<p className="footer-title mb-1">Horarios</p>
