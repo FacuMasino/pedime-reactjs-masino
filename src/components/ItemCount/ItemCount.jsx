@@ -31,7 +31,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 					type="number"
 					className="itemcount-control"
 					value={prodQty}
-					onChange={(e) => setProdQty(e.target.value)}
+					onChange={(e) => setProdQty(Number(e.target.value))}
 				/>
 				<button
 					disabled={!canIncrement}

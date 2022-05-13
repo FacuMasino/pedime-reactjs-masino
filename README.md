@@ -3,6 +3,23 @@
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+#### Desafío Clase 9 - CartContext:
+*Consigna:* 
+Implementa React Context para mantener el estado de compra del user, siguiendo los detalles del manual.
+Aspectos a incluir en el entregable:
+- :arrow_right: CartContext.js con el context y su custom provider (Impórtalo en App.js)
+- :arrow_right: Al clickear comprar en ItemDetail se debe guardar en el CartContext el producto y su cantidad en forma de objeto { name, price, quantity, etc. } dentro del array de productos agregados
+- :arrow_right: Detalle importante: CartContext debe tener la lógica incorporada de no aceptar duplicados y mantener su consistencia.
+- Métodos recomendados: 
+  - addItem(item, quantity) // agregar cierta cantidad de un ítem al carrito
+  - removeItem(itemId) // Remover un item del cart por usando su id
+  - clear() // Remover todos los items
+  - isInCart: (id) => true|false
+
+##### Cambios aplicados:
+- :white_check_mark: CartContext implementado con sus métodos
+- :white_check_mark: Se agregó además las funciones canAdd y getTotalQty dentro de CartContext
+- :white_check_mark: Se agregó un BannerContext para que la imagen del banner principal cambie dinámicamente según la categoría donde se encuentre navegando el usuario
 #### Desafío Clase 8 - Sincronizar Counter:
 *Consigna:*
 Importa el ItemCount.js del desafío Nº 4 en el counter ItemDetail.js, y configura el evento de compra, siguiendo los detalles de manual.

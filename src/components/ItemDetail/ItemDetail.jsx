@@ -1,21 +1,48 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { toast } from 'react-toastify';
+
 import ItemCount from '../ItemCount';
 import ItemDetailCarousel from './ItemDetailCarousel/ItemDetailCarousel';
-import { toast } from 'react-toastify';
+import { CartContext } from '../../contexts/CartContext';
+
 import './ItemDetail.scss';
+
+// Solo para probar que funcionan los métodos
+const TestCartMethods = ({ itemId }) => {
+	const { removeItem, clear } = useContext(CartContext);
+	return (
+		<>
+			<button className="btn btn-primary ms-2 me-1" onClick={() => removeItem(itemId)}>
+				Eliminar del carrito
+			</button>
+			<button className="btn btn-primary mx-1" onClick={() => clear()}>
+				Limpiar carrito
+			</button>
+		</>
+	);
+};
 
 const ItemDetail = ({ item }) => {
 	const [addedQty, setAddedQty] = useState(0);
+	const { addItem, canAdd } = useContext(CartContext);
 
 	const onAddHandler = (prodQty) => {
-		setAddedQty(prodQty);
-		toast.success(
-			`${prodQty} producto${prodQty > 1 ? 's' : ''} agregado${prodQty > 1 ? 's' : ''}`,
-			{
+		if (canAdd(item.id, item.stock, prodQty)) {
+			setAddedQty(prodQty);
+			toast.success(
+				`${prodQty} producto${prodQty > 1 ? 's' : ''} agregado${prodQty > 1 ? 's' : ''}`,
+				{
+					autoClose: 2000,
+				}
+			);
+			addItem(item, prodQty);
+		} else {
+			toast.error(`Solo podés agregar hasta ${item.stock} productos al carrito`, {
 				autoClose: 2000,
-			}
-		);
+			});
+		}
 	};
 
 	return (
@@ -41,12 +68,13 @@ const ItemDetail = ({ item }) => {
 								<Link className="btn btn-primary my-2" to="/cart">
 									Finalizar compra
 								</Link>
+								<TestCartMethods itemId={item.id} />
 							</>
 						) : (
 							<ItemCount
 								initial={1}
 								stock={item.stock}
-								onAdd={(prodQty) => onAddHandler(prodQty)}
+								onAdd={(prodQty) => onAddHandler(prodQty, item.stock)}
 							></ItemCount>
 						)}
 					</div>

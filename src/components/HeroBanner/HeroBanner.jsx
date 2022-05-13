@@ -1,8 +1,14 @@
+import { useContext } from 'react';
+
+import { BannerContext } from '../../contexts/BannerContext';
+
 import './HeroBanner.scss';
 
 const HeroBanner = () => {
+	const { category } = useContext(BannerContext);
+
 	return (
-		<div className="container-fluid vh-50 banner">
+		<div className={`container-fluid vh-50 banner banner-${category.name || 'default'}`}>
 			<div className="container h-100">
 				<div className="row align-items-center justify-content-start h-100">
 					<div className="col-8">

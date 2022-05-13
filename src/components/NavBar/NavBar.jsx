@@ -22,29 +22,29 @@ function NavBar() {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<ul className="navbar-nav">
-						<li class="nav-item">
+						<li className="nav-item">
 							<NavLink className="nav-link" to="/">
 								Inicio
 							</NavLink>
 						</li>
-						<li class="nav-item">
+						<li className="nav-item">
 							<NavLink className="nav-link" to="/category/burgers">
 								Burgers
 							</NavLink>
 						</li>
-						<li class="nav-item">
+						<li className="nav-item">
 							<NavLink className="nav-link" to="/category/pizzas">
 								Pizzas
 							</NavLink>
 						</li>
-						<li class="nav-item">
+						<li className="nav-item">
 							<NavLink className="nav-link" to="/category/picadas">
 								Picadas
 							</NavLink>
 						</li>
 					</ul>
 				</div>
-				<CartWidget className="d-inline-flex pe-lg-0 pb-lg-0 pb-1 pe-1">0</CartWidget>
+				<CartWidget className="d-inline-flex pe-lg-0 pb-lg-0 pb-1 pe-1" />
 			</div>
 		</nav>
 	);
