@@ -4,7 +4,7 @@ import './Footer.scss';
 
 const Footer = () => {
 	return (
-		<footer className="container-fluid bg-light p-2">
+		<footer className="container-fluid bg-light p-2 border-top">
 			<div className="container my-3">
 				<div className="d-flex flex-wrap justify-content-between">
 					<div className="col-md-3 col-12">

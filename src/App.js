@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import ItemListContainer from './pages/ItemListContainer';
 import ItemDetailContainer from './pages/ItemDetailContainer';
 import Cart from './pages/Cart';
+import NotFound from './pages/NotFound';
 // Contexts
 import { CartProvider } from './contexts/CartContext';
 import { BannerProvider } from './contexts/BannerContext';
@@ -26,6 +27,7 @@ function App() {
 						<Route path="/category/:categoryId" element={<ItemListContainer />} />
 						<Route path="/item/:itemId" element={<ItemDetailContainer />} />
 						<Route path="/cart" element={<Cart />} />
+						<Route path="*" element={<NotFound />} />
 					</Routes>
 					<Footer />
 					<ToastContainer />

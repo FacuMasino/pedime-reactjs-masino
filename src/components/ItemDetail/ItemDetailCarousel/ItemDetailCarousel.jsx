@@ -6,7 +6,7 @@ const ItemDetailCarousel = ({ images }) => {
 
 	return (
 		<div className="d-flex flex-md-row flex-column flex-wrap">
-			<div className="col-md-2 col-6">
+			<div className="col-md-2 col-3">
 				<div className="d-flex flex-md-column">
 					{images.map((img, index) => {
 						return (

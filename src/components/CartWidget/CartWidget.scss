@@ -3,6 +3,7 @@
 
 .cartwidget {
 	color: white;
+	cursor: pointer;
 	@media (max-width: map-get($grid-breakpoints, lg)) {
 		position: fixed;
 		bottom: 0;

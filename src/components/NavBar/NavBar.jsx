@@ -4,7 +4,7 @@ import './NavBar.scss';
 
 function NavBar() {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+		<nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
 			<div className="container">
 				<Link className="navbar-brand fw-bold" to="/">
 					Pedi<span className="text-secondary">Me</span>

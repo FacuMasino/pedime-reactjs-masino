@@ -7,6 +7,8 @@ export const CartContext = createContext({
 	removeItem: (id) => {},
 	clear: () => {},
 	getTotalQty: () => {},
+	getTotalPrice: () => {},
+	getTotalById: (id) => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -26,7 +28,13 @@ export const CartProvider = ({ children }) => {
 		if (isInCart(item.id)) {
 			setItems(
 				items.map((prod) =>
-					prod.id === item.id ? { ...prod, quantity: prod.quantity + qty } : prod
+					prod.id === item.id
+						? {
+								...prod,
+								subtotal: prod.price * (prod.quantity + qty),
+								quantity: prod.quantity + qty,
+						  }
+						: prod
 				)
 			);
 		} else {
@@ -34,9 +42,11 @@ export const CartProvider = ({ children }) => {
 				...items,
 				{
 					id: item.id,
-					name: item.title,
+					title: item.title,
 					price: item.price,
+					subtotal: item.price * qty,
 					image: item.images[0],
+					category: item.category,
 					quantity: qty,
 				},
 			]);
@@ -54,8 +64,24 @@ export const CartProvider = ({ children }) => {
 	const getTotalQty = () =>
 		items ? items.reduce((totalQty, item) => totalQty + item.quantity, 0) : 0;
 
+	const getTotalPrice = () =>
+		items ? items.reduce((totalPrice, item) => totalPrice + item.price * item.quantity, 0) : 0;
+
+	const getTotalById = (id) => (isInCart(id) ? items.find((item) => item.id === id).quantity : 0);
+
 	return (
-		<CartContext.Provider value={{ items, canAdd, addItem, removeItem, clear, getTotalQty }}>
+		<CartContext.Provider
+			value={{
+				items,
+				canAdd,
+				addItem,
+				removeItem,
+				clear,
+				getTotalQty,
+				getTotalPrice,
+				getTotalById,
+			}}
+		>
 			{children}
 		</CartContext.Provider>
 	);

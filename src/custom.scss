@@ -1,14 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap');
 // Personalizar variables de bootstrap antes del import
-$body-bg: #fbfbf1;
+$body-bg: #f8f8f8;
 $primary: #b51e24;
 $secondary: #fdc913;
 // Importar Bootstrap
 @import '~bootstrap/scss/bootstrap.scss';
 
-.btn {
-	transition: box-shadow 0.3s ease-in-out;
-	&:hover:not(:focus){
-		box-shadow: inset 9em 0 0 0 rgba(0,0,0,25%);
-	}
+.text-title {
+	font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-track {
+	background: #dbdbdb;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $primary;
+    border-radius: 13px;
+    border: solid 0.5px #dbdbdb;
 }

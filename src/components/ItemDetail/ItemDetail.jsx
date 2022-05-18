@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 
@@ -9,28 +8,13 @@ import { CartContext } from '../../contexts/CartContext';
 
 import './ItemDetail.scss';
 
-// Solo para probar que funcionan los métodos
-const TestCartMethods = ({ itemId }) => {
-	const { removeItem, clear } = useContext(CartContext);
-	return (
-		<>
-			<button className="btn btn-primary ms-2 me-1" onClick={() => removeItem(itemId)}>
-				Eliminar del carrito
-			</button>
-			<button className="btn btn-primary mx-1" onClick={() => clear()}>
-				Limpiar carrito
-			</button>
-		</>
-	);
-};
-
 const ItemDetail = ({ item }) => {
-	const [addedQty, setAddedQty] = useState(0);
-	const { addItem, canAdd } = useContext(CartContext);
+	const { addItem, canAdd, removeItem, getTotalById } = useContext(CartContext);
+
+	const navigate = useNavigate();
 
 	const onAddHandler = (prodQty) => {
 		if (canAdd(item.id, item.stock, prodQty)) {
-			setAddedQty(prodQty);
 			toast.success(
 				`${prodQty} producto${prodQty > 1 ? 's' : ''} agregado${prodQty > 1 ? 's' : ''}`,
 				{
@@ -51,8 +35,11 @@ const ItemDetail = ({ item }) => {
 				<div className="col-md-6 col-12">
 					<ItemDetailCarousel images={item.images} />
 				</div>
-				<div className="col-md-6 col-12 border-start p-3 ps-4">
+				<div className="col-md-6 col-12 border-start pb-3 ps-4">
 					<div className="border-bottom mb-3">
+						<span className="btn btn-link mb-3 p-0" onClick={() => navigate(-1)}>
+							{'<'} Volver
+						</span>
 						<p className="item-title h1">{item.title}</p>
 						<p className="item-price h3 text-primary mb-5">$ {item.price}</p>
 						<p className="item-title h4">DESCRIPCIÓN</p>
@@ -60,27 +47,34 @@ const ItemDetail = ({ item }) => {
 						<p className="my-0">
 							<span className="item-stock">Disponibles:</span> {item.stock}
 						</p>
-						{addedQty > 0 ? (
+						<ItemCount
+							initial={1}
+							stock={item.stock}
+							onAdd={(prodQty) => onAddHandler(prodQty, item.stock)}
+						></ItemCount>
+						{getTotalById(item.id) > 0 ? (
 							<>
 								<p className="m-0">
-									<span className="item-stock">Cantidad seleccionada:</span> {addedQty}
+									<span className="item-stock">Cantidad seleccionada:</span> {getTotalById(item.id)}
 								</p>
 								<Link className="btn btn-primary my-2" to="/cart">
 									Finalizar compra
 								</Link>
-								<TestCartMethods itemId={item.id} />
+								<button className="btn btn-primary ms-2 me-1" onClick={() => removeItem(item.id)}>
+									Eliminar del carrito
+								</button>
 							</>
-						) : (
-							<ItemCount
-								initial={1}
-								stock={item.stock}
-								onAdd={(prodQty) => onAddHandler(prodQty, item.stock)}
-							></ItemCount>
-						)}
+						) : null}
 					</div>
-					<p className="m-0">
-						Categoría: <span className="text-muted">{item.category}</span>
-					</p>
+					<div className="d-flex">
+						<p className="m-0 me-1">Categoría:</p>
+						<span
+							className="btn btn-link p-0"
+							onClick={() => navigate(`/category/${item.category}`)}
+						>
+							{item.category}
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>

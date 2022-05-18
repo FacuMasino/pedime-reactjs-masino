@@ -7,8 +7,8 @@ const pedimeProducts = [
 		category: 'Burgers',
 		description: 'Hamburguesa simple con cheddar y 1 porción chica de papas fritas',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/cheddar-thumb.png?mtime=20210916135032&focal=none',
-			'https://www.pikpng.com/pngl/b/596-5966102_papas-fritas-papas-fritas-sin-fondo-clipart.png',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fjuniorsimple.png?alt=media&token=758b386d-55aa-414d-ba5d-6bdf5195c887',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fpapasfritas.png?alt=media&token=9a8a0028-8d8e-4c3e-9e2b-a87f78cb806d',
 		],
 	},
 	{
@@ -19,7 +19,7 @@ const pedimeProducts = [
 		category: 'Burgers',
 		description: 'Hamburguesa doble con cheddar y 1 porción chica de papas fritas',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/cheddar-duplo-thumb.png?mtime=20210916135304&focal=none',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fjuniordoble.png?alt=media&token=65179cab-b23d-4887-92c5-a7b3c0d4b8d7',
 		],
 	},
 	{
@@ -31,7 +31,7 @@ const pedimeProducts = [
 		description:
 			'Hamburguesa XL con cheddar, tomate, rodajas de pepino y 1 porción de papas medianas',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/cheeseburger-thumb.png?mtime=20210916134524&focal=none',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fdeluxesimple.png?alt=media&token=f14711a5-e076-410d-8aac-512ba78dcd95',
 		],
 	},
 	{
@@ -43,7 +43,7 @@ const pedimeProducts = [
 		description:
 			'Hamburguesa XL Doble con cheddar, tomate, rodajas de pepino y 1 porción de papas medianas',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/cheeseburger-duplo-thumb_2021-09-16-134859_rdjn.png?mtime=20210916134900&focal=none',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fdeluxedoble.png?alt=media&token=180e097b-dcff-4e0e-be50-7e6077ddc479',
 		],
 	},
 	{
@@ -54,7 +54,7 @@ const pedimeProducts = [
 		category: 'Burgers',
 		description: 'Hamburguesa XXL Doble con cheddar, doble bacon y 1 porción de papas grandes',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/maga-stacker-atomico-2-thumb.png?mtime=20210916133613&focal=none',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fburgerpedime.png?alt=media&token=41e89744-9a6a-41a3-9806-15cc3741e526',
 		],
 	},
 	{
@@ -65,7 +65,7 @@ const pedimeProducts = [
 		category: 'Burgers',
 		description: 'Hamburguesa XXL Triple con cheddar, triple bacon y 1 porción de papas grandes',
 		images: [
-			'https://d3sn2rlrwxy0ce.cloudfront.net/maga-stacker-atomico-2-thumb.png?mtime=20210916133613&focal=none',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fburgers%2Fburgerpedimeextra.png?alt=media&token=797e59c5-3330-47f4-82ef-14ed6c4a5103',
 		],
 	},
 	{
@@ -76,7 +76,7 @@ const pedimeProducts = [
 		category: 'Pizzas',
 		description: 'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, orégano y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/93bf06a9-9b03-4dd4-b1b8-1effbe52bf4a.jpg?quality=90&width=2560&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzamuzzarella.webp?alt=media&token=7f9d13b8-0a75-42e2-a79f-e0796d1a33dc',
 		],
 	},
 	{
@@ -88,7 +88,7 @@ const pedimeProducts = [
 		description:
 			'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, albahaca, orégano y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/501961-d8138f6a-3c13-4eb6-8662-df36cf8ca052.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzamuzzarella_albahaca.webp?alt=media&token=378b7276-f037-44c5-bb53-4ee035ad7b8c',
 		],
 	},
 	{
@@ -100,7 +100,7 @@ const pedimeProducts = [
 		description:
 			'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, anchoas, orégano y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/359178-f7c3c27c-2bdd-4606-9acf-69962fe5a34c.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzamuzzarella_albahaca_anchoas.webp?alt=media&token=53ede0dc-a8f4-4a4d-a0a7-fa3bea8b27ef',
 		],
 	},
 	{
@@ -112,7 +112,7 @@ const pedimeProducts = [
 		description:
 			'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, jamón, orégano y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/501961-da6ec20a-ef33-4721-92a3-b269babd7d14.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzamuzzarellacjamon.webp?alt=media&token=ce50ae25-3f04-448b-9156-1610d48b3bdf',
 		],
 	},
 	{
@@ -124,7 +124,7 @@ const pedimeProducts = [
 		description:
 			'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, rodajas de longaniza a la calabresa, orégano y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/501961-2e5ea88e-0ca1-4c02-8667-9273215d4513.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzacalabresa.webp?alt=media&token=6969bf43-6476-427a-8dcb-5eb52a2cf7b7',
 		],
 	},
 	{
@@ -136,7 +136,7 @@ const pedimeProducts = [
 		description:
 			'Pizza grande (8 porciones) de Muzzarella, salsa de tomate, jamón, huevo duro y aceitunas',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/501961-6ac0a63d-153d-45f7-a6eb-20e1b098bd62.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpizzas%2Fpizzaprimavera.webp?alt=media&token=73270a0f-80ec-4829-a77d-d120c240b136',
 		],
 	},
 	{
@@ -148,8 +148,8 @@ const pedimeProducts = [
 		description:
 			'Jamón crudo, mortadela, 3 tipos de salames, queso pategrás y holanda, mix de quesos marinados, aceitunas, mini ensalada, pan flauta, mani y salsa alioli',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/25b40531-a4eb-493d-9e07-703e0144d837.jpg?quality=90&width=1280&webp=1',
-			'https://http2.mlstatic.com/D_NQ_NP_733751-MLA40016877449_122019-O.jpg',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fpicada_113.webp?alt=media&token=848c3c56-2048-4a10-8783-32bba81caba5',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fquesopategras.jpg?alt=media&token=587060b7-a348-4f38-9a10-926cd360fba8',
 		],
 	},
 	{
@@ -161,7 +161,7 @@ const pedimeProducts = [
 		description:
 			'Jamón crudo, queso pategrás en cuñas, maní, aceitunas verdes, aderezo, salsa alioli y pan artesanal',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/f13f247f-3378-470d-b737-58e362008199.jpg?quality=90&width=1280&webp=1',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fpicada_114.webp?alt=media&token=b9e9061c-28c8-48cc-83c7-ad243382c4d6',
 		],
 	},
 	{
@@ -173,16 +173,16 @@ const pedimeProducts = [
 		description:
 			'Salame estacionado, queso pategras en cuñas, aceitunas, mini ensalada, pan flauta, mani y salsa alioli',
 		images: [
-			'https://images.deliveryhero.io/image/pedidosya/products/38fba724-d664-4dbd-871e-9effabad76f5.jpg?quality=90&width=1280&webp=1',
-			'https://http2.mlstatic.com/D_NQ_NP_733751-MLA40016877449_122019-O.jpg',
-			'https://http2.mlstatic.com/D_NQ_NP_703499-MLA44086339342_112020-O.jpg',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fpicada_115.webp?alt=media&token=79c0460f-b088-4303-99de-f4c63babb72b',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fquesopategras.jpg?alt=media&token=587060b7-a348-4f38-9a10-926cd360fba8',
+			'https://firebasestorage.googleapis.com/v0/b/pedime-reactjs-masino.appspot.com/o/assets%2Fimg%2Fpicadas%2Fsalame.jpg?alt=media&token=cf11b56d-ae13-4b86-b6d7-c77afc3e99d5',
 		],
 	},
 ];
 
 const getProducts = () => {
 	return new Promise((resolve) => {
-		setTimeout(() => resolve(pedimeProducts), 2000);
+		setTimeout(() => resolve(pedimeProducts), 1300);
 	});
 };
 
@@ -194,7 +194,7 @@ const getProductById = (id) => {
 
 const getProductsByCategory = (category) => {
 	return getProducts().then((products) => {
-		return products.filter((product) => product.category.toLowerCase() === category);
+		return products.filter((product) => product.category.toLowerCase() === category.toLowerCase());
 	});
 };
 

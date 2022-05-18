@@ -3,6 +3,28 @@
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+#### Desafío Clase 10 - Cart View
+*Consigna:*
+Expande tu componente Cart.js con el desglose de la compra, y actualiza tu CartWidget.js para hacerlo reactivo al contexto.
+Aspectos a incluir en el entregable:
+- :arrow_right: Cart.js 
+  - Debe mostrar el desglose de tu carrito y el precio total.
+  - Debe estar agregada la ruta ‘cart’ al BrowserRouter.
+  - Debe mostrar todos los ítems agregados agrupados.
+  - Por cada tipo de ítem, incluye un control para eliminar ítems.
+  - De no haber ítems muestra un mensaje, de manera condicional, diciendo que no hay ítems y un react-router Link o un botón para que pueda volver al Landing (ItemListContainer.js) para buscar y comprar algo.
+- :arrow_right: CartWidget.js.
+  -Ahora debe consumir el CartContext y mostrar en tiempo real (aparte del ícono) qué cantidad de ítems están agregados (2 camisas y 1 gorro equivaldrían a 3 items).
+  - El cart widget no se debe mostrar más si no hay items en el carrito, aplicando la técnica que elijas (dismount, style, etc).
+  - Cuando el estado interno de ItemDetail tenga la cantidad de ítems solicitados mostrar en su lugar un botón que diga “Terminar mi compra” 
+##### Cambios aplicados:
+- :white_check_mark: Se agregó una page "NotFound" para cuándo el usuario ingrese a una ruta que no existe
+- :white_check_mark: Se agregó el componente Cart con sus componentes CartItemList y CartItem para mejorar la legibilidad e independencia de cada componente
+- :white_check_mark: Cada CartItem posee en su título un link que lleva al usuario al producto
+- :white_check_mark: Se agregó en CartContext 2 funciones getTotalPrice y getTotalById para la correcta implementación del Cart con el detalle de los productos
+- :white_check_mark: Se agregó la propiedad "subtotal" en el array "items" devuelto por CartContext para obtener el precio subtotal cuándo hay más de 1 mismo producto agregado.
+- :white_check_mark: Se agregó un link "Volver" y ahora la categoría es clickeable en "ItemDetail"
+
 #### Desafío Clase 9 - CartContext:
 *Consigna:* 
 Implementa React Context para mantener el estado de compra del user, siguiendo los detalles del manual.

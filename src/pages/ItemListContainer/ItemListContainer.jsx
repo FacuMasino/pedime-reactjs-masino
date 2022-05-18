@@ -30,9 +30,11 @@ const ItemListContainer = () => {
 	}, [categoryId]);
 
 	return (
-		<div className="container p-2">
-			<div className="row row-cols-1 row-cols-md-3 g-4">
-				{isLoading ? <ItemListSkeleton itemsQty={6} /> : <ItemList items={products}></ItemList>}
+		<div className="container-fluid bg-body py-md-4 py-2">
+			<div className="container p-2 my-2">
+				<div className="row row-cols-1 row-cols-md-3 g-4">
+					{isLoading ? <ItemListSkeleton itemsQty={6} /> : <ItemList items={products}></ItemList>}
+				</div>
 			</div>
 		</div>
 	);

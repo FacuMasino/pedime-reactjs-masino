@@ -11,7 +11,7 @@ const HeroBanner = () => {
 		<div className={`container-fluid vh-50 banner banner-${category.name || 'default'}`}>
 			<div className="container h-100">
 				<div className="row align-items-center justify-content-start h-100">
-					<div className="col-8">
+					<div className="col-md-10 col-12">
 						<p className="banner-brand h1 text-white text-uppercase">
 							Pedi<span className="text-secondary">Me!</span>
 						</p>
