@@ -3,6 +3,15 @@
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+#### Desafío Clase 11 - Firebase I:
+*Consigna:*
+Conecta tu nueva ItemCollection de Google Firestore a tu ItemListContainer y ItemDetailContainer.
+- Aspectos a incluir en el entregable:
+  - :arrow_right:Conecta tu colección de firestore con el listado de ítems y con el detalle de ítem.
+  - :arrow_right:Elimina los async mocks (promises) y reemplazalos por los llamados de Firestore.
+  - :arrow_right:Si navegas a /item/:id, debe ocurrir una consulta de (1) documento. 
+  - :arrow_right:Si navegas al catálogo, debes consultar (N) documentos con un query filtrado, implementando la lógica de categorías y obteniendo el id de categoría del parámetro de react-router :categoryId.
+
 #### Desafío Clase 10 - Cart View
 *Consigna:*
 Expande tu componente Cart.js con el desglose de la compra, y actualiza tu CartWidget.js para hacerlo reactivo al contexto.

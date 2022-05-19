@@ -46,7 +46,7 @@ export const CartProvider = ({ children }) => {
 					price: item.price,
 					subtotal: item.price * qty,
 					image: item.images[0],
-					category: item.category,
+					categoryId: item.categoryId,
 					quantity: qty,
 				},
 			]);

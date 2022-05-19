@@ -70,9 +70,9 @@ const ItemDetail = ({ item }) => {
 						<p className="m-0 me-1">Categoría:</p>
 						<span
 							className="btn btn-link p-0"
-							onClick={() => navigate(`/category/${item.category}`)}
+							onClick={() => navigate(`/category/${item.categoryId}`)}
 						>
-							{item.category}
+							{item.categoryId}
 						</span>
 					</div>
 				</div>

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import ItemList from '../../components/ItemList';
 import ItemListSkeleton from '../../components/ItemListSkeleton';
-import { getProducts, getProductsByCategory } from '../../services/getProducts';
+import { getProducts, getProductsByCategory } from '../../services';
 
 import { BannerContext } from '../../contexts/BannerContext';
 

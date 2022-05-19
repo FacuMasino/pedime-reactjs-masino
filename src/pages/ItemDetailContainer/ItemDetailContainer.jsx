@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
-import { getProductById } from '../../services/getProducts';
+import { getProductById } from '../../services';
 
 import ItemDetail from '../../components/ItemDetail';
 import ItemDetailSkeleton from '../../components/ItemDetailSkeleton';
-import NotFound from '../../pages/NotFound';
 
 const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 	const { itemId } = useParams();
+
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		setIsLoading(true);
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
 			) : product ? (
 				<ItemDetail item={product}></ItemDetail>
 			) : (
-				<NotFound />
+				navigate('/404')
 			)}
 		</div>
 	);
