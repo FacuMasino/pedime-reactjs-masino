@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import ItemListContainer from './pages/ItemListContainer';
 import ItemDetailContainer from './pages/ItemDetailContainer';
 import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
 import NotFound from './pages/NotFound';
 // Contexts
 import { CartProvider } from './contexts/CartContext';
@@ -27,6 +28,7 @@ function App() {
 						<Route path="/category/:categoryId" element={<ItemListContainer />} />
 						<Route path="/item/:itemId" element={<ItemDetailContainer />} />
 						<Route path="/cart" element={<Cart />} />
+						<Route path="/checkout" element={<Checkout />} />
 						<Route path="/404" element={<NotFound />} />
 						<Route path="*" element={<NotFound />} />
 					</Routes>

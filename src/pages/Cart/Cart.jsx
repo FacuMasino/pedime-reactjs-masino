@@ -6,8 +6,7 @@ import { toast } from 'react-toastify';
 import { CartContext } from '../../contexts/CartContext';
 
 import CartItemList from '../../components/CartItemList';
-
-import emptyCart from '../../assets/img/emptycart.png';
+import CartEmpty from '../../components/CartEmpty';
 
 const Cart = () => {
 	const { items, getTotalQty, getTotalPrice, clear } = useContext(CartContext);
@@ -20,31 +19,14 @@ const Cart = () => {
 		});
 	};
 
-	const handleOrder = () => {
-		toast.warning(`En desarrollo...`, {
-			autoClose: 2000,
-		});
-	};
-
 	return (
-		<div className="container-fluid bg-body py-md-4 py-2">
+		<div className="container-fluid bg-light py-md-4 py-2">
 			<div className="container my-2">
 				<div className="row align-items-center justify-content-center">
 					<h1 className="text-center text-title p-2">CARRITO</h1>
 					<div className="col-12">
 						{getTotalQty() === 0 ? (
-							<div className="d-flex flex-column align-items-center">
-								<img src={emptyCart} className="img-fluid" alt="Carrito vacío" />
-								<div className="col-12 text-center">
-									<h2 className="text-title p-2">Oops! tu carrito está vacío</h2>
-									<p className="h5">
-										Parece que todavía no agregaste ningún producto, echa un vistazo a nuestro menú
-									</p>
-								</div>
-								<button className="btn btn-outline-primary fw-bold" onClick={() => navigate('/')}>
-									Volver al catálogo
-								</button>
-							</div>
+							<CartEmpty />
 						) : (
 							<>
 								<CartItemList items={items} />
@@ -71,7 +53,7 @@ const Cart = () => {
 										</button>
 									</div>
 									<div className="col-6 text-end">
-										<button className="btn btn-primary" onClick={() => handleOrder()}>
+										<button className="btn btn-primary" onClick={() => navigate('/checkout')}>
 											Realizar pedido
 										</button>
 									</div>

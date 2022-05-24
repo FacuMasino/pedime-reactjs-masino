@@ -3,6 +3,17 @@
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+#### Desafío Clase 12 - Firebase II:
+*Consigna:* crea tu colección de órdenes.
+- Aspectos a incluir en el entregable:
+  - :arrow_right: Utiliza las operaciones de inserción para insertar tu orden en la colección y dale al user su id de orden auto-generada
+  - :arrow_right: Crea los mappings para poder grabar un objeto del formato 
+{ buyer: { name, phone, email }, items: [{ id, title, price }], date, total  }
+
+##### Cambios aplicados:
+- :white_check_mark: Si el producto no tiene stock ahora muestra "sin stock" tanto en el componente "ItemDetail" como "Item" dentro de "ItemListContainer"
+- :white_check_mark: Se creo el componente "<CheckoutForm>" que contiene el formulario que el usuario deberá llenar para hacer el pedido y pasa los datos del mismo a "Checkout" para que los procese.
+- :white_check_mark: Se creó una page "/checkout" que dentro contiene la lógica para manejar los datos proporcionados por el usuario en "<CheckoutForm>", enviarlos a Firestore y mostrar el resultado, si fue exitoso o hubo un error. En caso de ser exitoso abrirá una pestaña nueva redirigiendo al usuario a WhatsApp con un mensaje predefinido. Si ocurre un error lo mostrará al usuario con un botón para volver al carrito e intentar nuevamente.
 #### Desafío Clase 11 - Firebase I:
 *Consigna:*
 Conecta tu nueva ItemCollection de Google Firestore a tu ItemListContainer y ItemDetailContainer.

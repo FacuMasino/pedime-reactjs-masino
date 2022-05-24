@@ -6,7 +6,7 @@ const NotFound = () => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="container-fluid bg-body py-2">
+		<div className="container-fluid bg-light py-2">
 			<div className="container py-2 my-2">
 				<div className="d-flex flex-column align-items-center">
 					<img src={notFoundImg} className="img-fluid" alt="Página no encontrada" />

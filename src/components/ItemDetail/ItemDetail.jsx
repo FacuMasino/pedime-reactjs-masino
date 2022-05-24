@@ -45,7 +45,8 @@ const ItemDetail = ({ item }) => {
 						<p className="item-title h4">DESCRIPCIÓN</p>
 						<p className="mb-4">{item.description}</p>
 						<p className="my-0">
-							<span className="item-stock">Disponibles:</span> {item.stock}
+							<span className="item-stock">{item.stock ? 'Disponibles:' : 'SIN STOCK'}</span>{' '}
+							{item.stock || null}
 						</p>
 						<ItemCount
 							initial={1}

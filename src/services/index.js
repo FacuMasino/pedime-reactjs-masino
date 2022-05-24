@@ -1,4 +1,13 @@
-import { collection, getDocs, doc, getDoc, query, where, orderBy } from 'firebase/firestore';
+import {
+	collection,
+	getDocs,
+	doc,
+	getDoc,
+	addDoc,
+	query,
+	where,
+	orderBy,
+} from 'firebase/firestore';
 
 import { db } from './firebase';
 
@@ -27,4 +36,13 @@ export const getProductsByCategory = async (categoryId) => {
 	const docs = [];
 	qSnap.forEach((doc) => docs.push({ id: doc.id, ...doc.data() }));
 	return docs;
+};
+
+export const saveOrder = async (order) => {
+	try {
+		const docRef = await addDoc(collection(db, 'orders'), order);
+		return { status: { hasError: false, errorDescription: null }, id: docRef.id };
+	} catch (e) {
+		return { status: { hasError: true, errorDescription: e.message }, id: null };
+	}
 };
