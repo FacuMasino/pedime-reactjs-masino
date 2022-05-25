@@ -151,7 +151,7 @@ const CheckoutForm = ({ onCheckout }) => {
 									<h6>{item.title}</h6>
 									<p>Cantidad: {item.quantity}</p>
 								</div>
-								<small className="text-nowrap">$ {item.price}</small>
+								<small className="text-nowrap">$ {item.price} C/U</small>
 							</li>
 						))}
 					</ul>
