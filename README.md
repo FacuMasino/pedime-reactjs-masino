@@ -1,8 +1,89 @@
 # <img src="https://raw.githubusercontent.com/FacuMasino/FacuMasino/main/assets/react-js.png" width="32"/> Proyecto final - Curso React JS
-## PediMe App :motor_scooter:	
+## <img src="https://github.com/FacuMasino/pedime-reactjs-masino/blob/main/public/favicon-32x32.png?raw=true" width="32"/> PediMe App
 ### :pizza:	Delivery de comida rápida :hamburger:	
-> Para el proyecto final se eligió hacer una app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el/los menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
+> Para el proyecto final se eligió hacer una web-app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
+## Tabla de contenidos
+---
+- [Comenzando](#comenzando)
+- [Dependencias del proyecto](#dependencias-del-proyecto)
+- [Estructura de carpetas](#estructura-de-carpetas)
+- [Historial de cambios y desafíos](#historial-de-cambios-y-desafíos)
+## 🚀Comenzando
+---
+Siguiendo estas instrucciones vas a poder tener una copia del proyecto funcionando localmente
+
+### Instalación
+
+- Clonar el repositorio:
+  ```bash
+  git clone https://github.com/FacuMasino/pedime-reactjs-masino.git
+  ```
+- Dirigirse al directorio pedime-reactjs-masino
+  ```bash
+    cd pedime-reactjs-masino
+  ```
+- Instalar dependencias
+  ```bash
+    npm install
+  ```
+
+### Iniciando el proyecto
+Para correr el proyecto simplemente ejecuta este comando
+
+```bash
+npm start
+```
+
+##🔌Dependencias del proyecto
+---
+Esta es la lista de dependencias y las versiones utilizadas
+
+- @fortawesome/fontawesome-svg-core@6.1.1
+- @fortawesome/free-brands-svg-icons@6.1.1
+- @fortawesome/free-solid-svg-icons@6.1.1
+- @fortawesome/react-fontawesome@0.1.18
+- bootstrap@5.1.3
+- sass@1.50.0
+- firebase@9.8.1
+- react-router-dom@6.3.0
+- react-toastify@8.2.0
+
+## 📂Estructura de carpetas
+---
+
+### src
+
+* [assets/](.\src\assets)
+  * [img/](.\src\assets\img)
+* [components/](.\src\components)
+  * [CartEmpty/](.\src\components\CartEmpty)
+  * [CartItemList/](.\src\components\CartItemList)
+    * [CartItem/](.\src\components\CartItemList\CartItem)
+  * [CartWidget/](.\src\components\CartWidget)
+  * [CheckoutForm/](.\src\components\CheckoutForm)
+  * [Footer/](.\src\components\Footer)
+  * [HeroBanner/](.\src\components\HeroBanner)
+  * [Item/](.\src\components\Item)
+  * [ItemCount/](.\src\components\ItemCount)
+  * [ItemDetail/](.\src\components\ItemDetail)
+    * [ItemDetailCarousel/](.\src\components\ItemDetail\ItemDetailCarousel)
+  * [ItemDetailSkeleton/](.\src\components\ItemDetailSkeleton)
+  * [ItemList/](.\src\components\ItemList)
+  * [ItemListSkeleton/](.\src\components\ItemListSkeleton)
+  * [NavBar/](.\src\components\NavBar)
+* [contexts/](.\src\contexts)
+* [helpers/](.\src\helpers)
+* [pages/](.\src\pages)
+  * [Cart/](.\src\pages\Cart)
+  * [Checkout/](.\src\pages\Checkout)
+  * [ItemDetailContainer/](.\src\pages\ItemDetailContainer)
+  * [ItemListContainer/](.\src\pages\ItemListContainer)
+  * [NotFound/](.\src\pages\NotFound)
+* [services/](.\src\services)
+
+### 📃Historial de cambios y desafíos
+---
 #### Desafío Clase 12 - Firebase II:
 *Consigna:* crea tu colección de órdenes.
 - Aspectos a incluir en el entregable:

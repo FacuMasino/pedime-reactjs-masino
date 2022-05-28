@@ -44,7 +44,7 @@ const formatDate = (msDate) => {
 };
 
 export const createWppLink = (orderData) => {
-	const BASE_URL = 'https://wa.me/5492227516436?text=';
+	const BASE_URL = 'https://wa.me/5492227537643?text=';
 	const msg =
 		`Hola! Esta es la orden *#${orderData.id}* de _PediMe_,` +
 		`generada hoy _${formatDate(orderData.date)}_ por *${orderData.buyer.name} ${

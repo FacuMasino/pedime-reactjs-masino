@@ -24,9 +24,30 @@ const Footer = () => {
 					</div>
 					<div className="col-md-3 col-12">
 						<p className="footer-title mb-1">Redes sociales</p>
-						<FontAwesomeIcon className="pe-2" icon="fab fa-whatsapp-square" size="2x" />
-						<FontAwesomeIcon className="px-2" icon="fab fa-facebook-square" size="2x" />
-						<FontAwesomeIcon className="px-2" icon="fab fa-instagram-square" size="2x" />
+						<a
+							href="https://facebook.com/"
+							className="link-dark icon-link"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon className="px-2" icon="fab fa-facebook-square" size="2x" />
+						</a>
+						<a
+							href="https://instagram.com/"
+							className="link-dark icon-link"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FontAwesomeIcon className="px-2" icon="fab fa-instagram-square" size="2x" />
+						</a>
+						<a
+							href="https://github.com/FacuMasino/pedime-reactjs-masino"
+							target="_blank"
+							rel="noreferrer"
+							className="link-dark icon-link"
+						>
+							<FontAwesomeIcon className="px-2" icon="fab fa-github-square" size="2x" />
+						</a>
 					</div>
 				</div>
 			</div>

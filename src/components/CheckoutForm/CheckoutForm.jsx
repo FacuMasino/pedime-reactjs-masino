@@ -37,7 +37,7 @@ const CheckoutForm = ({ onCheckout }) => {
 
 	return (
 		<div className="row g-5">
-			<div className="col-md-8 col-12 py-3">
+			<div className="col-md-8 order-md-1 order-2 col-12 py-3">
 				<h2 className="text-title border-bottom">TUS DATOS</h2>
 				<form onSubmit={(e) => handleSubmit(e)}>
 					<div className="row mb-3">
@@ -141,7 +141,7 @@ const CheckoutForm = ({ onCheckout }) => {
 					</div>
 				</form>
 			</div>
-			<div className="col-md-4 col-12">
+			<div className="col-md-4 order-md-2 order-1 col-12">
 				<div className="bg-white shadow rounded p-3">
 					<h2 className="text-title border-bottom">RESUMEN</h2>
 					<ul className="list-group list-group-flush mb-3">
