@@ -46,7 +46,7 @@ Para correr el proyecto simplemente ejecuta este comando
 npm start
 ```
 
-##🔌Dependencias del proyecto
+## 🔌Dependencias del proyecto
 ---
 Esta es la lista de dependencias y las versiones utilizadas
 
