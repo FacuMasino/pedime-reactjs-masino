@@ -60,7 +60,7 @@ export const createWppLink = (orderData) => {
 
 export const openWpp = (orderData) => {
 	try {
-		let newTab = window.open();
+		const newTab = window.open();
 		newTab.location.href = createWppLink(orderData);
 	} catch {
 		// Evita un error en mobile cuándo se bloquea el popUp

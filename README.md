@@ -8,10 +8,10 @@
 > Para el proyecto final se eligió hacer una web-app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
 <div align="center">
-  <a href="http://www.youtube.com/watch?v=D2pIWv4CYc4" target="_blank"><img src="./preview_yt.png" 
-  alt="PediMe App - Proyecto final React JS Coderhouse - Navegación" width="480" height="360" border="5" /></a>
+  <a href="http://www.youtube.com/watch?v=D2pIWv4CYc4" target="_blank" rel="noreferrer"><img src="./preview_yt.png" 
+  alt="PediMe App - Proyecto final React JS Coderhouse - Navegación" width="50%" border="5" /></a>
   <p>Video demostración de la navegación</p>
-</div>
+</div> 
 
 > Link del proyecto online: https://pedime.netlify.app
 
