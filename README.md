@@ -1,6 +1,6 @@
 # <img src="https://raw.githubusercontent.com/FacuMasino/FacuMasino/main/assets/react-js.png" width="32"/> Proyecto final - Curso React JS
 <div align="center">
-  <img src="https://lh4.googleusercontent.com/UNjSnTzCo8SI75ZH-Oi6KKvvq9-Xw72LxCs_cNsgDR3f18-ZtV1fLgTKLN0VQ40KHRzjDNmFUn94HUY5bFIp=w2560-h613-rw" width="50%" title="PediMe" alt="Logo PediMe"/>
+  <img src="./logo_readme.png" width="50%" title="PediMe" alt="Logo PediMe"/>
 </div>
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una web-app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
