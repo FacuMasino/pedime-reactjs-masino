@@ -1,13 +1,14 @@
 # <img src="https://raw.githubusercontent.com/FacuMasino/FacuMasino/main/assets/react-js.png" width="32"/> Proyecto final - Curso React JS
+
 <div align="center">
   <img src="./logo_readme.png" width="50%" title="PediMe" alt="Logo PediMe"/>
 </div>
+
 ### :pizza:	Delivery de comida rápida :hamburger:	
 > Para el proyecto final se eligió hacer una web-app para hacer delivery de comida rápida. La misma va a tener distintas categorías y el usuario podrá agregar al carrito el menú que desee para luego "finalizar la compra" y hacer el pedido por WhatsApp.
 
 <div align="center">
-  <a href="http://www.youtube.com/watch?v=D2pIWv4CYc4
-  " target="_blank"><img src="https://lh3.googleusercontent.com/o9S7bU6hpvz29BroebQouM2bwvNiQf9kg8zGmg3A0CmEFgans0i7kCrJpq7JLfJAdNxpFE-otRTjasSE7dQl=w2560-h918-rw" 
+  <a href="http://www.youtube.com/watch?v=D2pIWv4CYc4" target="_blank"><img src="./preview_yt.png" 
   alt="PediMe App - Proyecto final React JS Coderhouse - Navegación" width="480" height="360" border="5" /></a>
   <p>Video demostración de la navegación</p>
 </div>
